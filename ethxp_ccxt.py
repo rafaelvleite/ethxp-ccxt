@@ -20,6 +20,9 @@ okx_markets = okx.load_markets()
 bybit = ccxt.bybit()
 bybit_markets = bybit.load_markets()
 
+binance = ccxt.binance()
+binance_markets = binance.load_markets()
+
 
 print(deribit.id, deribit.load_markets())
 print(deribit.fetch_ticker('BTC-IBUT-29SEP23-5000_22000_80000'))
@@ -40,3 +43,7 @@ print(okx.fetch_order_book(okx.symbols[0]))
 print(bybit.id, bybit.load_markets())
 print(bybit.fetch_ticker('10000NFT/USDT:USDT'))
 print(bybit.fetch_order_book(bybit.symbols[0]))
+
+print(binance.id, binance.load_markets())
+print(binance.fetch_ticker('GO/BNB'))
+print(binance.fetch_order_book(binance.symbols[0]))
